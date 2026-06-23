@@ -693,17 +693,17 @@ def run_optimized_analysis(filepath, sample_size=2000, max_workers=50):
 # EXECUTE
 # ============================================================================
 
-FILE_PATH = "/content/drive/MyDrive/Datasets/January2015toFebruary2025.csv"
+FILE_PATH = "January2015toFebruary2025.csv"
 
 # Run with larger sample for robust results
-results = run_optimized_analysis(
-    filepath=FILE_PATH,
-    sample_size=500,  # Increase this for final paper (recommend 3000-5000)
-    max_workers=50
-)
+# results = run_optimized_analysis(
+#     filepath=FILE_PATH,
+#     sample_size=500,  # Increase this for final paper (recommend 3000-5000)
+#     max_workers=50
+# )
 
-if results:
-    print("\n✓✓✓ Ready for submission to Journal of Construction Engineering and Management ✓✓✓")
+# if results:
+#     print("\n✓✓✓ Ready for submission to Journal of Construction Engineering and Management ✓✓✓")
 
 def load_maritime_construction_data(filepath):
     """Load and filter specifically for maritime/marine construction"""
@@ -924,8 +924,8 @@ def run_maritime_analysis(filepath, sample_size=2000, max_workers=50):
             'cv_results': cv_results, 'granger_results': granger_results}
 
 # RUN MARITIME ANALYSIS
-FILE_PATH = "/content/drive/MyDrive/Datasets/January2015toFebruary2025.csv"
-results = run_maritime_analysis(filepath=FILE_PATH, sample_size=99000, max_workers=50)
+FILE_PATH = "January2015toFebruary2025.csv"
+# results = run_maritime_analysis(filepath=FILE_PATH, sample_size=99000, max_workers=50)
 
 """
 MARITIME CONSTRUCTION SAFETY ANALYSIS
@@ -2210,9 +2210,9 @@ def run_complete_maritime_analysis(filepath, max_workers=50):
 # EXECUTE COMPLETE ANALYSIS
 # ============================================================================
 
-if __name__ == "__main__":
+if False:
     # Set your file path
-    FILE_PATH = "/content/drive/MyDrive/Datasets/construction_osha_dataset.csv"
+    FILE_PATH = "January2015toFebruary2025.csv"
 
     # Run complete analysis
     results = run_complete_maritime_analysis(
@@ -3415,9 +3415,9 @@ def run_ULTIMATE_maritime_analysis(filepath, max_workers=20, use_smote=True):
 # RUN ANALYSIS
 # ============================================================================
 
-if __name__ == "__main__":
+if False:
     # Set your file path
-    FILE_PATH = "/content/drive/MyDrive/Datasets/construction_osha_dataset.csv"
+    FILE_PATH = "January2015toFebruary2025.csv"
 
     # Run ULTIMATE analysis
     output = run_ULTIMATE_maritime_analysis(
@@ -4822,7 +4822,7 @@ BEST MODEL: {best_name}
 - Matthews Correlation Coefficient: {best_metrics['MCC']:.3f}
 - Cohen's Kappa: {best_metrics['Kappa']:.3f}
 - Cross-Validation AUC: {results[best_name]['cv_scores'].mean():.3f} ± {results[best_name]['cv_scores'].std():.3f}
-- Temporal Validation AUC: {results['_temporal_auc']:.3f}
+- Temporal Validation AUC: {results['_temporal_auc']}
 
 PERFORMANCE TIER:
 """
@@ -4886,10 +4886,10 @@ Dataset:
 # RUN ANALYSIS
 # ============================================================================
 
-if __name__ == "__main__":
+if False:
     # Set your file path
-    FILE_PATH = "/content/drive/MyDrive/Datasets/construction_osha_dataset.csv"
-    # For Google Colab: FILE_PATH = "/content/drive/MyDrive/Datasets/construction_osha_dataset.csv"
+    FILE_PATH = "January2015toFebruary2025.csv"
+    # For Google Colab: FILE_PATH = "January2015toFebruary2025.csv"
 
     # Run complete journal-ready analysis
     output = run_JOURNAL_maritime_analysis(
@@ -5576,8 +5576,8 @@ def run_JOURNAL_maritime_analysis(filepath, max_workers=20, use_smote=True):
 
     return df_featured
 
-if __name__ == "__main__":
-    FILE_PATH = "/content/drive/MyDrive/Datasets/construction_osha_dataset.csv"
+if False:
+    FILE_PATH = "January2015toFebruary2025.csv"
     output = run_JOURNAL_maritime_analysis(filepath=FILE_PATH, max_workers=20, use_smote=True)
 
 """
@@ -7154,7 +7154,7 @@ BEST MODEL: {best_name}
 - Matthews Correlation Coefficient: {best_metrics['MCC']:.3f}
 - Cohen's Kappa: {best_metrics['Kappa']:.3f}
 - Cross-Validation AUC: {results[best_name]['cv_scores'].mean():.3f} ± {results[best_name]['cv_scores'].std():.3f}
-- Temporal Validation AUC: {results['_temporal_auc']:.3f}
+- Temporal Validation AUC: {results['_temporal_auc']}
 
 PERFORMANCE TIER:
 """
@@ -7220,9 +7220,9 @@ Dataset:
 # RUN ANALYSIS
 # ============================================================================
 
-if __name__ == "__main__":
-    FILE_PATH = "/content/drive/MyDrive/Datasets/construction_osha_dataset.csv"
-    # For Google Colab: FILE_PATH = "/content/drive/MyDrive/Datasets/construction_osha_dataset.csv"
+if False:
+    FILE_PATH = "January2015toFebruary2025.csv"
+    # For Google Colab: FILE_PATH = "January2015toFebruary2025.csv"
 
     output = run_JOURNAL_maritime_analysis(
         filepath=FILE_PATH,
@@ -8823,7 +8823,7 @@ BEST MODEL: {best_name}
 - Matthews Correlation Coefficient: {best_metrics['MCC']:.3f}
 - Cohen's Kappa: {best_metrics['Kappa']:.3f}
 - Cross-Validation AUC: {results[best_name]['cv_scores'].mean():.3f} ± {results[best_name]['cv_scores'].std():.3f}
-- Temporal Validation AUC: {results['_temporal_auc']:.3f}
+- Temporal Validation AUC: {results['_temporal_auc']}
 
 PERFORMANCE TIER:
 """
@@ -8889,9 +8889,9 @@ Dataset:
 # RUN ANALYSIS
 # ============================================================================
 
-if __name__ == "__main__":
-    FILE_PATH = "/content/drive/MyDrive/Datasets/construction_osha_dataset.csv"
-    # For Google Colab: FILE_PATH = "/content/drive/MyDrive/Datasets/construction_osha_dataset.csv"
+if False:
+    FILE_PATH = "January2015toFebruary2025.csv"
+    # For Google Colab: FILE_PATH = "January2015toFebruary2025.csv"
 
     output = run_JOURNAL_maritime_analysis(
         filepath=FILE_PATH,
@@ -9426,26 +9426,61 @@ def engineer_ULTIMATE_features(df):
 
     df['temp_wind_interaction'] = df['temp_mean'] * df['wind_speed_mean']
     df['precip_wind_interaction'] = df['precip_total'] * df['wind_speed_mean']
+    from sklearn.linear_model import LogisticRegression
+    weather_cols = ['extreme_cold', 'extreme_heat', 'high_wind', 'heavy_precip', 'freeze_thaw']
+    X_weather = df[weather_cols].fillna(0)
+    y_target = (df['Hospitalized'] > 0).astype(int)
+    try:
+        lr = LogisticRegression(class_weight='balanced', random_state=42)
+        lr.fit(X_weather, y_target)
+        coefs = lr.coef_[0]
+        weights = np.maximum(0, coefs) # Only keep positive weights
+        if weights.sum() == 0:
+            weights = np.ones(len(weather_cols))
+    except Exception as e:
+        weights = np.ones(len(weather_cols))
+    
     df['weather_severity_score'] = (
-        (df['extreme_cold'] + df['extreme_heat']) * 2 +
-        df['high_wind'] * 3 +
-        df['heavy_precip'] * 2 +
-        df['freeze_thaw'] * 2
+        df['extreme_cold'] * weights[0] +
+        df['extreme_heat'] * weights[1] +
+        df['high_wind'] * weights[2] +
+        df['heavy_precip'] * weights[3] +
+        df['freeze_thaw'] * weights[4]
     )
-
-    employer_stats = df.groupby('Employer').agg({
-        'Hospitalized': ['mean', 'count'],
-        'Amputation': ['mean']
-    })
-    employer_stats.columns = ['employer_hosp_rate', 'employer_incident_count', 'employer_amp_rate']
-    df = df.merge(employer_stats, left_on='Employer', right_index=True, how='left')
-
-    df['employer_risk_score'] = np.where(
-        df['employer_incident_count'] >= 3,
-        df['employer_hosp_rate'] + 2 * df['employer_amp_rate'],
-        df['Hospitalized'].mean()
+    
+    with open('model_results.txt', 'a', encoding='utf-8') as f:
+        f.write('\nEmpirical Weather Weights:\n')
+        for col, w in zip(weather_cols, weights):
+            f.write(f'{col}: {w:.3f}\n')
+    # FIXED TARGET LEAKAGE: Chronological Expanding Window for Employer Risk
+    # Sort chronologically to ensure we only look at the past
+    df_sorted = df.sort_values('EventDate')
+    
+    # Calculate cumulative prior incidents for each employer (excluding current incident)
+    df_sorted['employer_incident_count'] = df_sorted.groupby('Employer').cumcount()
+    
+    # Calculate cumulative prior hospitalizations and amputations
+    # Shift by 1 within group so current target is NOT leaked
+    df_sorted['employer_hosp_sum'] = df_sorted.groupby('Employer')['Hospitalized'].transform(lambda x: x.shift().cumsum()).fillna(0)
+    df_sorted['employer_amp_sum'] = df_sorted.groupby('Employer')['Amputation'].transform(lambda x: x.shift().cumsum()).fillna(0)
+    
+    # Calculate historical rates (handle division by zero)
+    df_sorted['employer_hosp_rate'] = df_sorted['employer_hosp_sum'] / df_sorted['employer_incident_count'].replace(0, 1)
+    df_sorted['employer_amp_rate'] = df_sorted['employer_amp_sum'] / df_sorted['employer_incident_count'].replace(0, 1)
+    
+    # If no prior incidents, use global average up to that point
+    global_hosp_mean = df_sorted['Hospitalized'].expanding().mean().shift().fillna(df_sorted['Hospitalized'].mean())
+    
+    df_sorted['employer_risk_score'] = np.where(
+        df_sorted['employer_incident_count'] >= 3,
+        df_sorted['employer_hosp_rate'] + 2 * df_sorted['employer_amp_rate'],
+        global_hosp_mean
     )
-    df['employer_is_high_severity'] = (df['employer_amp_rate'] > 0.1).astype(int)
+    df_sorted['employer_is_high_severity'] = (df_sorted['employer_amp_rate'] > 0.1).astype(int)
+    
+    # Restore original index order
+    df = df_sorted.loc[df.index]
+
 
     equipment_stats = df.groupby('equipment_type').agg({
         'Hospitalized': 'mean',
@@ -10550,7 +10585,7 @@ BEST MODEL: {best_name}
 - Matthews Correlation Coefficient: {best_metrics['MCC']:.3f}
 - Cohen's Kappa: {best_metrics['Kappa']:.3f}
 - Cross-Validation AUC: {results[best_name]['cv_scores'].mean():.3f} ± {results[best_name]['cv_scores'].std():.3f}
-- Temporal Validation AUC: {results['_temporal_auc']:.3f}
+- Temporal Validation AUC: {results['_temporal_auc']}
 
 PERFORMANCE TIER:
 """
@@ -10618,9 +10653,9 @@ Dataset:
 # RUN ANALYSIS
 # ============================================================================
 
-if __name__ == "__main__":
-    FILE_PATH = "/content/drive/MyDrive/Datasets/construction_osha_dataset.csv"
-    # For Google Colab: FILE_PATH = "/content/drive/MyDrive/Datasets/construction_osha_dataset.csv"
+if False:
+    FILE_PATH = "January2015toFebruary2025.csv"
+    # For Google Colab: FILE_PATH = "January2015toFebruary2025.csv"
 
     output = run_ULTIMATE_maritime_analysis(
         filepath=FILE_PATH,
@@ -11171,7 +11206,7 @@ def run_comprehensive_validation(df_path):
 # RUN
 # ============================================================================
 
-if __name__ == "__main__":
+if False:
     validation_results = run_comprehensive_validation(
         df_path='maritime_construction_ULTIMATE.csv'
     )
@@ -11490,7 +11525,7 @@ def create_separate_manuscript_figures(df, results, output_prefix='fig'):
     return True
 
 # Example usage (add this after your ULTIMATE analysis completes):
-create_separate_manuscript_figures(df_featured, results, output_prefix='maritime_fig')
+# create_separate_manuscript_figures(df_featured, results, output_prefix='maritime_fig')
 
 # Fixed wrapper for your specific output structure
 import pandas as pd
@@ -11540,7 +11575,7 @@ def prepare_and_generate_figures(output, output_prefix='maritime_fig'):
     create_separate_manuscript_figures(df, results, output_prefix)
 
 # Run it!
-prepare_and_generate_figures(output, output_prefix='maritime_fig')
+# prepare_and_generate_figures(output, output_prefix='maritime_fig')
 
 # ============================================================================
 # ROBUST FIX: Properly handle numeric vs non-numeric columns
@@ -11585,10 +11620,10 @@ def get_numeric_features(df, exclude_base_cols=None):
     return numeric_cols
 
 # Test it
-print("Testing feature extraction...")
-test_features = get_numeric_features(output['dataframe'])
-print(f"\\n✓ Found {len(test_features)} valid numeric features")
-print(f"\\nFirst 10 features: {test_features[:10]}")
+# print("Testing feature extraction...")
+# # test_features = get_numeric_features(output['dataframe'])
+# print(f"\\n✓ Found {len(test_features)} valid numeric features")
+# print(f"\\nFirst 10 features: {test_features[:10]}")
 """
 
 print("="*80)
@@ -11865,4 +11900,60 @@ def create_validation_figures(output, prefix='fig'):
     return optimal_threshold
 
 # NOW YOU CAN RUN:
-optimal_threshold = create_validation_figures(output, prefix='fig')
+# optimal_threshold = create_validation_figures(output, prefix='fig')
+if __name__ == "__main__":
+    import os
+    from sklearn.metrics import brier_score_loss, roc_auc_score
+    FILE_PATH = "January2015toFebruary2025.csv"
+    
+    # Initialize the results file
+    with open('model_results.txt', 'w', encoding='utf-8') as f:
+        f.write("=== OSHA Weather Analysis Results ===\n")
+        
+    print("Running ULTIMATE maritime analysis...")
+    output = run_ULTIMATE_maritime_analysis(
+        filepath=FILE_PATH,
+        max_workers=4,
+        use_smote=True
+    )
+    
+    if output:
+        best_model_name = output['best_model']
+        best_model = output['results'][best_model_name]['model']
+        y_test = output['results']['_test_data']['y_test']
+        y_pred = output['results'][best_model_name]['y_pred']
+        
+        auc = roc_auc_score(y_test, y_pred)
+        brier = brier_score_loss(y_test, y_pred)
+        
+        with open('model_results.txt', 'a', encoding='utf-8') as f:
+            f.write(f"\nBest Model: {best_model_name}\n")
+            f.write(f"Test AUC: {auc:.4f}\n")
+            f.write(f"Brier Score: {brier:.4f}\n")
+            
+            # Try to save feature importances
+            f.write("\nTop Feature Importances:\n")
+            if hasattr(best_model, 'feature_importances_'):
+                imp = best_model.feature_importances_
+                feats = output['results']['_feature_cols']
+                for feat, val in sorted(zip(feats, imp), key=lambda x: x[1], reverse=True)[:10]:
+                    f.write(f"  {feat}: {val:.4f}\n")
+            elif hasattr(best_model, 'estimators_'):
+                f.write("  (Model is an ensemble/stacking model without direct feature importances)\n")
+                
+        # Run validations (which should include delong and calibration)
+        print("Running comprehensive validations...")
+        # Make sure create_validation_figures is called
+        try:
+            create_validation_figures(output, prefix='maritime_fig')
+        except Exception as e:
+            print(f"Error in create_validation_figures: {e}")
+            
+        try:
+            # We explicitly run delong and calibration if they are not inside create_validation_figures
+            run_statistical_tests(output['results'])
+            calibration_analysis(output['results'])
+        except Exception as e:
+            print(f"Error running specific validation functions: {e}")
+            
+        print("\n✓ Analysis complete! Results saved to model_results.txt")
